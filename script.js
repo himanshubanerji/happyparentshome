@@ -83,3 +83,15 @@ if (mapFrame) {
   if (desktop.matches) loadMap();
   desktop.addEventListener('change', e => { if (e.matches) loadMap(); });
 }
+
+// Links whose target differs on desktop: href is the mobile target, data-href-desktop the desktop one.
+const desktopLinks = document.querySelectorAll('[data-href-desktop]');
+if (desktopLinks.length) {
+  const desktopMq = window.matchMedia('(min-width: 1024px)');
+  const syncLinks = () => desktopLinks.forEach(a => {
+    a.dataset.hrefMobile = a.dataset.hrefMobile || a.getAttribute('href');
+    a.setAttribute('href', desktopMq.matches ? a.dataset.hrefDesktop : a.dataset.hrefMobile);
+  });
+  syncLinks();
+  desktopMq.addEventListener('change', syncLinks);
+}

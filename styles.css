@@ -170,7 +170,7 @@ svg { display: block; }
 .note-meta { font-size: 13px; color: var(--ink-3); }
 
 /* ---------- Where money goes ---------- */
-.money { padding: 64px 16px 0; display: flex; flex-direction: column; gap: 22px; }
+.money { padding: 64px 16px 0; display: none; flex-direction: column; gap: 22px; } /* hidden below 1024px; shown on desktop */
 .money-card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px 20px; display: flex; flex-direction: column; gap: 18px; }
 .spend-bar { display: flex; height: 40px; border-radius: 8px; overflow: hidden; }
 .legend { display: flex; flex-direction: column; }
@@ -461,7 +461,7 @@ svg { display: block; }
   .note-meta { font-size: 14px; }
 
   /* Money */
-  .money { padding: 120px var(--pad) 0; gap: 40px; }
+  .money { padding: 120px var(--pad) 0; gap: 40px; display: flex; }
   .money-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; }
   .money-head .section-head { max-width: 720px; }
   .money-card { padding: 44px; gap: 32px; }
