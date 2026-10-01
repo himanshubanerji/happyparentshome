@@ -229,7 +229,10 @@
     <div class="upi-info">
       <h2 class="nr"><span class="d-only">Scan to pay by UPI</span><span class="m-only">Pay by UPI</span></h2>
       <span class="mono upi-id">mshappyparentshome.eazypay@icici</span>
-      <a class="upi-open" href="upi://pay?pa=MSHAPPYPARENTSHOME.eazypay@icici&amp;pn=M%2FS.HAPPY%20PARENTS%20HOME%20&amp;tr=EZYS9839014085&amp;cu=INR&amp;mc=7299">Donate with UPI</a>
+      <!-- upi:// link removed: UPI apps reject link-started payments to this Eazypay ID (manual entry/QR work).
+           Restore once ICICI enables intent payments: upi://pay?pa=MSHAPPYPARENTSHOME.eazypay@icici&pn=M%2FS.HAPPY%20PARENTS%20HOME%20&tr=EZYS9839014085&cu=INR&mc=7299 -->
+      <button type="button" class="upi-open" data-copy="mshappyparentshome.eazypay@icici">Copy UPI ID</button>
+      <p class="upi-hint">Paste it in any UPI app to donate.</p>
     </div>
   </div>
   <!-- Hidden until registration/80G/12A docs are ready. When restoring, also undo the "papers card hidden" .direct grid tweaks in styles.css.

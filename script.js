@@ -33,10 +33,13 @@ document.addEventListener('click', e => {
   const copy = e.target.closest('[data-copy]');
   if (copy) {
     try { navigator.clipboard && navigator.clipboard.writeText(copy.dataset.copy); } catch (err) {}
-    document.querySelectorAll('[data-copy]').forEach(b => { b.textContent = 'Copy'; });
+    document.querySelectorAll('[data-copy]').forEach(b => {
+      b.dataset.label = b.dataset.label || b.textContent;
+      clearTimeout(b._t);
+      b.textContent = b.dataset.label;
+    });
     copy.textContent = 'Copied';
-    clearTimeout(copy._t);
-    copy._t = setTimeout(() => { copy.textContent = 'Copy'; }, 1600);
+    copy._t = setTimeout(() => { copy.textContent = copy.dataset.label; }, 1600);
   }
 });
 

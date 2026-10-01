@@ -242,8 +242,9 @@ svg { display: block; }
 .upi-info { flex: 1; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
 .upi h2 { font-size: 23px; line-height: 1.15; }
 .upi-id { font-size: 14px; }
-.upi-open { min-height: 44px; padding: 0 16px; border-radius: 999px; background: var(--green); color: var(--white); text-decoration: none; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+.upi-open { border: 0; cursor: pointer; font-family: inherit; min-height: 44px; padding: 0 16px; border-radius: 999px; background: var(--green); color: var(--white); text-decoration: none; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
 .upi-open:hover { color: var(--white); background: var(--green-dark); }
+.upi-hint { font-size: 13px; color: var(--ink-3); }
 
 .papers { background: var(--green); color: var(--paper); border-radius: 14px; padding: 24px 20px; display: flex; flex-direction: column; gap: 10px; }
 .papers h2 { font-size: 25px; }
@@ -512,7 +513,7 @@ svg { display: block; }
   .bank dt { font-size: inherit; }
   .copy-btn { display: none; }
   .qr { display: block; }
-  .upi-open { display: none; }
+  .upi-open, .upi-hint { display: none; }
   .bank-note { font-size: 15px; }
   .papers { padding: 40px; gap: 16px; }
   .papers h2 { font-size: 30px; }
